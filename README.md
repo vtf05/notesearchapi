@@ -14,7 +14,7 @@ This is a simple API for searching notes. It's built with Django and Django Rest
 
 1. Clone the repository:
     ```
-    git clone https://github.com/yourusername/notesearchapi.git
+    git clone https://github.com/vtf05/notesearchapi.git
     ```
 
 2. Navigate to the project directory:
@@ -24,7 +24,8 @@ This is a simple API for searching notes. It's built with Django and Django Rest
 
 3. Install the requirements:
     ```
-    pip install -r requirements.txt
+    pipenv shell
+    pipenv install
     ```
 
 4. Run the migrations:
@@ -37,6 +38,14 @@ This is a simple API for searching notes. It's built with Django and Django Rest
     python manage.py runserver
     ```
 
-## How to Run the Tests
 
-To run the tests, use the following command:
+
+## Setup Files or Scripts
+
+The project uses a `Pipfile`  to manage dependencies. You can install all the required packages with the command `pipenv shell and pipenv install `.
+
+The project uses SQLite as the database, so no additional setup is required for the database.
+We can also use PostgreSQL for this project because In PostgreSQL, you define a schema for your data. This can be beneficial for a note-taking application where each note will likely have a consistent structure , PostgreSQL is fully ACID-compliant (Atomicity, Consistency, Isolation, Durability), ensuring data integrity and consistency even in the event of system failures. PostgreSQL has robust built-in support for full-text search, which is a key requirement for your note-taking application.
+I have used SQLite 3 to avoid any additional setup
+
+The project uses Django's built-in server, so no additional setup is required for the server.
